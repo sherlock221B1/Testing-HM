@@ -12,6 +12,7 @@ body{
 }
 .hamburgerMenuContainer{
     cursor: pointer;
+    z-index: 2;
 }
 .hamburger{
     width: 40px;
@@ -36,13 +37,17 @@ body{
     height: 100vh;
     position: absolute;
     top: 0px;
-
-    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    opacity: 0;
+    transition: all 1s ease;
+
+}
+.overlayMenuShower{
+    opacity: 1;
 }
 li{
     list-style: none;
@@ -50,6 +55,14 @@ li{
     padding: 5px;
     user-select: none;
     cursor: pointer;
+}
+li:hover{
+    opacity: 0.6;
+}
+.liTagUp{
+    transform: translateY(-10px);
+}
+ul{
     transition: all 1s ease;
 }
 /*
